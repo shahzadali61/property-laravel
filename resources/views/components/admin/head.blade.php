@@ -32,6 +32,7 @@
     <!-- Vendors CSS -->
     <link rel="stylesheet" href="{{ url('admin/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css') }}" />
     <link rel="stylesheet" href="{{ url('admin/assets/vendor/libs/apex-charts/apex-charts.css') }}" />
+    <link rel="stylesheet" href="{{ url('admin/assets/css/auth.css') }}" />
     <link rel="stylesheet" href="{{ url('admin/assets/css/custom.css') }}" />
 
     @stack('css')

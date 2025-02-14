@@ -17,7 +17,7 @@
             @include('components.admin.sidebar')
 
             <!-- Main layout -->
-            <div class="layout-page">
+            <div class="layout-page ms-5">
 
                 <!-- Navbar -->
                 @include('components.admin.navbar')

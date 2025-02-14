@@ -1,0 +1,38 @@
+.auth{
+    background-color: rgb(255, 255, 255);
+    margin: 50px 0px;
+}
+.auth .auth-img{
+    width: 250px;
+
+}
+.auth label{
+    color: black;
+}
+.auth .auth-form-title{
+    font-weight: 800;
+    margin-bottom: 40px;
+}
+.auth .auth-form-width{
+    width: 60%;
+}
+.auth .carousel-title
+{
+    text-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.auth .carousel-content
+{
+    text-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.auth .carousel-img{
+    border-radius: 10px;
+}
+@media only screen and (max-width: 768px) {
+    .auth .auth-form-width{
+        width: 100%;
+    }
+
+}
+@media only screen and (max-width: 576px) {
+
+}
