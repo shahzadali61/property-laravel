@@ -1,6 +1,6 @@
 <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme sidebar">
     <div class="app-brand demo mt-4">
-        <a href="#" class="app-brand-link">
+        <a href="{{ route('home') }}" class="app-brand-link">
             <span class="app-brand-text demo menu-text fw-semibold ms-2">
                 <img class="img-fluid" style="width: 150px" height="50px" src="{{ asset('admin/assets/img/sidebar.png') }}" alt="not-show">
             </span>
@@ -28,10 +28,10 @@
         </li>
 
         <!-- Data Tables -->
-        <li class="menu-item">
-            <a href="#" class="menu-link">
+        <li class="menu-item {{ request()->routeIs('applicants') ? 'active' : '' }}">
+            <a href="{{ route('applicants') }}" class="menu-link">
                 <i class="menu-icon tf-icons ri-grid-line"></i>
-                <div data-i18n="Datatables">Datatables</div>
+                <div data-i18n="Applicant">Applicant</div>
             </a>
         </li>
 
