@@ -28,8 +28,8 @@
                 </li>
 
                 <div class="d-flex align-items-center">
-                    <li class="nav-item lh-1 me-4 navbar-search">
-                        <div class="nav-item d-flex align-items-center border ps-3">
+                    <li class="nav-item lh-1 me-4 navbar-search ">
+                        <div class="nav-item d-flex align-items-center rounded-2 border ps-3">
                             <i class="ri-search-line ri-22px me-2"></i>
                             <input type="text" class="form-control border-0 shadow-none" placeholder="Search..."
                                 aria-label="Search..." />

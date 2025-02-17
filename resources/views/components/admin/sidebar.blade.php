@@ -15,13 +15,13 @@
         <li class="menu-item">
             <a href="#" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons ri-layout-2-line"></i>
-                <div data-i18n="Layouts">Layouts</div>
+                <div data-i18n="Layouts">Dashboard</div>
             </a>
 
             <ul class="menu-sub">
                 <li class="menu-item">
                     <a href="#" class="menu-link">
-                        <div>layout 1</div>
+                        <div>Option</div>
                     </a>
                 </li>
             </ul>
@@ -39,7 +39,8 @@
         <li class="menu-header mt-7"><span class="">Preference</span></li>
         <li class="menu-item">
             <a href="#" class="menu-link">
-                <i class="menu-icon tf-icons ri-lifebuoy-line"></i>
+
+                <i class="ri-settings-2-line menu-icon "></i>
                 <div data-i18n="Support">Setting</div>
             </a>
         </li>
