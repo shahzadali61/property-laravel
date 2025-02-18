@@ -1,12 +1,6 @@
 @extends('layouts.dashboard')
 @section('content')
 <div class="row">
-    <div class="col-12">
-        <a class="dropdown-item waves-effect" type="button" data-bs-toggle="offcanvas" data-bs-target="#addNewPresent" aria-controls="addNewPresent">
-            Add New Preset
-        </a>
-
-    </div>
     <div class="col-12 horizone-line pb-5">
         <div class="card">
             <div class=" d-sm-flex justify-content-sm-between  card-header table-header horizone-line ">
@@ -603,7 +597,7 @@
     <div class="offcanvas-body px-5">
         <div class="row">
             <div class="col-12 border-line py-5">
-                <h6 class="mb-0">Agent view preset</h6>
+               <input type="text" class="form-control border-0" placeholder="Enter preset name">
             </div>
 
             {{-- Search by --}}
