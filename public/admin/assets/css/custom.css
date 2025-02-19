@@ -97,6 +97,10 @@ a{
      height: 40px !important;
 
 }
+.form-control:focus,
+.form-select:focus {
+  border-color: #ff5f00 !important;
+}
 .btn{
     height: 45px;
     font-size: 12px;
