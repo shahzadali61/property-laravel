@@ -148,6 +148,23 @@ a{
     border: none !important;
 
 }
+.multi-tabs{
+    margin-top: 50px;
+}
+.multi-tabs .nav-link {
+    color: #c0bec5;
+
+}
+.multi-tabs .nav-tabs .nav-link.active{
+   color: black ;
+}
+.nav-tabs .nav-link.active {
+    /* border-bottom: 3px solid red !important; */
+}
+.nav-pills .nav-link.active:focus {
+    
+}
+
 
 @media only screen and (max-width: 1200px) {
 

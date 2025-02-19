@@ -28,7 +28,7 @@
         </li>
 
         <!-- Data Tables -->
-        <li class="menu-item {{ request()->routeIs('applicants') || request()->routeIs('add-applicant') ? 'active' : '' }}">
+        <li class="menu-item {{ request()->routeIs('applicants') || request()->routeIs('add-applicant') || request()->routeIs('personal-detail') ? 'active' : '' }}">
             <a href="{{ route('applicants') }}" class="menu-link">
                 <i class="menu-icon tf-icons ri-grid-line"></i>
                 <div data-i18n="Applicant">Applicant</div>
