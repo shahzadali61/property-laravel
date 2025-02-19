@@ -1,12 +1,7 @@
 @extends('layouts.dashboard')
 @section('content')
 <div class="row">
-    <col-12>
-    <a class="dropdown-item waves-effect" type="button" data-bs-toggle="offcanvas" data-bs-target="#filter" aria-controls="filter">
-       Filter
-    </a>
 
-    </col-12>
     <div class="col-12 horizone-line pb-5">
         <div class="card">
             <div class=" d-sm-flex justify-content-sm-between  card-header table-header horizone-line ">
@@ -57,12 +52,8 @@
                     </ul>
                   </div>
                 <div class="btn-group px-2 ml-0 mb-2">
-                    <button type="button" class="btn btn-outline-secondary rounded-2  waves-effect " data-bs-toggle="dropdown" aria-expanded="false">  <i class=" menu-icon ri-filter-line"></i>Filter</button>
-                    <ul class="dropdown-menu" style="">
-                      <li><a class="dropdown-item waves-effect" href="javascript:void(0);">Active</a></li>
-                      <li><a class="dropdown-item waves-effect" href="javascript:void(0);">InActive</a></li>
+                    <button class="btn btn-outline-secondary rounded-2  waves-effect " type="button" data-bs-toggle="offcanvas" data-bs-target="#filter" aria-controls="filter">  <i class=" menu-icon ri-filter-line"></i>Filter</button>
 
-                    </ul>
                   </div>
                  <div class="ml-0 mb-2">
                     <a class="btn btn-primary  rounded-2  waves-effect" href="#"> <i class="pe-1 ri-add-circle-line"></i>Add Applicant</a>
