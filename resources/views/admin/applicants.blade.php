@@ -1,6 +1,12 @@
 @extends('layouts.dashboard')
 @section('content')
 <div class="row">
+    <col-12>
+    <a class="dropdown-item waves-effect" type="button" data-bs-toggle="offcanvas" data-bs-target="#filter" aria-controls="filter">
+       Filter
+    </a>
+
+    </col-12>
     <div class="col-12 horizone-line pb-5">
         <div class="card">
             <div class=" d-sm-flex justify-content-sm-between  card-header table-header horizone-line ">
@@ -884,6 +890,338 @@
             <div class="col-12 mt-3 text-end">
                 <button class="btn btn-outline-secondary save-btn mb-2">Cancel</button>
                 <button class="btn btn-primary save-btn mb-2">Create new preset</button>
+            </div>
+        </div>
+    </div>
+{{-- Filter --}}
+<div class="offcanvas offcanvas-end right-sidebar"tabindex="-1" data-bs-backdrop="false" id="filter" aria-labelledby="filterLabel">
+    <div class="offcanvas-header justify-content-sm-between mx-2 flex-wrap flex-sm-nowrap">
+        <div class="d-flex align-items-center">
+            <button type="button" class=" d-flex justify-content-center align-items-center close-btn me-2" data-bs-dismiss="offcanvas" aria-label="Close"><i class="ri-arrow-left-s-line"></i></button>
+            <h4 class="offcanvas-title" id="filterLabel">Filters</h4>
+        </div>
+       <div>
+        <button class="btn btn-outlibe-secondary save-btn mt-sm-0 mt-2">Save</button>
+        <button class="btn btn-primary save-btn mt-sm-0 mt-2">Apply</button>
+       </div>
+    </div>
+
+    <div class="offcanvas-body px-5">
+        <div class="row">
+            {{-- Search by --}}
+            <div class="col-12 border-line py-5">
+                <div class="row">
+                    <div class="col-12">
+                        <h5>Search by
+                        </h5>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="mb-lg-0 mb-2">
+                            <label class="form-label">Branch</label>
+                            <select class="form-select form-select-sm">
+                                <option selected disabled>Choose Salutation</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="mb-lg-0 mb-2">
+                            <label class="form-label">Branch</label>
+                            <select class="form-select form-select-sm">
+                                <option selected disabled>Choose Salutation</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="mb-lg-0 mb-2">
+                            <label class="form-label">Status</label>
+                            <select class="form-select form-select-sm">
+                                <option selected disabled>Choose Salutation</option>
+                                <option value="1">Active</option>
+                                <option value="2">Inactive</option>
+                                <option value="3">Pending</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 border-line py-5">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="mb-lg-0 mb-2">
+                            <label class="form-label">Branch</label>
+                            <select class="form-select form-select-sm">
+                                <option selected disabled>Choose Salutation</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="mb-lg-0 mb-2">
+                            <label class="form-label">Branch</label>
+                            <select class="form-select form-select-sm">
+                                <option selected disabled>Choose Salutation</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="mb-lg-0 mb-2">
+                            <label class="form-label">Status</label>
+                            <select class="form-select form-select-sm">
+                                <option selected disabled>Choose Salutation</option>
+                                <option value="1">Active</option>
+                                <option value="2">Inactive</option>
+                                <option value="3">Pending</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-4">
+                    <div class="col-lg-4">
+                        <div class="mb-lg-0 mb-2">
+                            <label class="form-label">Labels</label>
+                            <select class="form-select form-select-sm">
+                                <option selected disabled>Choose Salutation</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="mb-lg-0 mb-2">
+                            <label class="form-label">Beds</label>
+                            <select class="form-select form-select-sm">
+                                <option selected disabled>Studio</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="mb-lg-0 mb-2">
+                            <label class="form-label d-block">&nbsp;</label> <!-- Keeps alignment -->
+                            <select class="form-select form-select-sm mt-2">
+                                <option selected disabled>Max</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="mb-lg-0 mb-2">
+                            <label class="form-label">Order ID</label>
+                            <select class="form-select form-select-sm">
+                                <option selected disabled>Choose Salutation</option>
+                                <option value="1">Active</option>
+                                <option value="2">Inactive</option>
+                                <option value="3">Pending</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{-- Areas Details --}}
+            <div class="col-12 border-line py-5">
+                <div class="row">
+                    <div class="col-12">
+                        <h5>Areas Details</h5>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="mb-lg-0 mb-2">
+                            <label class="form-label">Areas</label>
+                            <select class="form-select form-select-sm">
+                                <option selected disabled>Choose Salutation</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="mb-lg-0 mb-2">
+                            <label class="form-label">Postcodes</label>
+                            <select class="form-select form-select-sm">
+                                <option selected disabled>Choose Salutation</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="mb-lg-0 mb-2">
+                            <label class="form-label">Counties</label>
+                            <select class="form-select form-select-sm">
+                                <option selected disabled>Choose Salutation</option>
+                                <option value="1">Active</option>
+                                <option value="2">Inactive</option>
+                                <option value="3">Pending</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{-- Navigator Details --}}
+            <div class="col-12 border-line py-5">
+                <div class="row">
+                    <div class="col-12">
+                        <h5>Navigator Details</h5>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="mb-lg-0 mb-2">
+                            <label class="form-label">Type</label>
+                            <select class="form-select form-select-sm">
+                                <option selected disabled>Choose Salutation</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="mb-lg-0 mb-2">
+                            <label class="form-label">Branch</label>
+                            <select class="form-select form-select-sm">
+                                <option selected disabled>Choose Salutation</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="mb-lg-0 mb-2">
+                            <label class="form-label">Source</label>
+                            <select class="form-select form-select-sm">
+                                <option selected disabled>Choose Salutation</option>
+                                <option value="1">Active</option>
+                                <option value="2">Inactive</option>
+                                <option value="3">Pending</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{-- Applicant Details--}}
+            <div class="col-12 border-line py-5">
+                <div class="row">
+                    <div class="col-12">
+                        <h5>Applicant Details
+                        </h5>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="mb-lg-0 mb-2">
+                            <label class="form-label">Navigator</label>
+                            <select class="form-select form-select-sm">
+                                <option selected disabled>Choose Salutation</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="mb-lg-0 mb-2">
+                            <label class="form-label">LHA / DWP</label>
+                            <select class="form-select form-select-sm">
+                                <option selected disabled>Choose Salutation</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="mb-lg-0 mb-2">
+                            <label class="form-label">Proceedability</label>
+                            <select class="form-select form-select-sm">
+                                <option selected disabled>Choose Salutation</option>
+                                <option value="1">Active</option>
+                                <option value="2">Inactive</option>
+                                <option value="3">Pending</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-12 border-line py-5">
+
+
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <h5>Property
+                        </h5>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="mb-lg-0 mb-2">
+                            <label class="form-label">Furnishing</label>
+                            <select class="form-select form-select-sm">
+                                <option selected disabled>Choose Salutation</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="mb-lg-0 mb-2">
+                            <label class="form-label">Bathroom</label>
+                            <select class="form-select form-select-sm">
+                                <option selected disabled>Studio</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="mb-lg-0 mb-2">
+                            <label class="form-label d-block">&nbsp;</label> <!-- Keeps alignment -->
+                            <select class="form-select form-select-sm mt-2">
+                                <option selected disabled>Max</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="mb-lg-0 mb-2">
+                            <label class="form-label">Property Types</label>
+                            <select class="form-select form-select-sm">
+                                <option selected disabled>Choose Salutation</option>
+                                <option value="1">Active</option>
+                                <option value="2">Inactive</option>
+                                <option value="3">Pending</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            {{-- Living / Floor space(sqm) --}}
+
+            <div class="col-12 mt-3 text-end">
+                <button class="btn btn-outline-secondary save-btn mb-2">Cancel</button>
+                <button class="btn btn-primary save-btn mb-2"> Save</button>
             </div>
         </div>
     </div>
