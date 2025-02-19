@@ -56,7 +56,7 @@
 
                   </div>
                  <div class="ml-0 mb-2">
-                    <a class="btn btn-primary  rounded-2  waves-effect" href="#"> <i class="pe-1 ri-add-circle-line"></i>Add Applicant</a>
+                    <a class="btn btn-primary  rounded-2  waves-effect" href="{{ route('add-applicant') }}"> <i class="pe-1 ri-add-circle-line"></i>Add Applicant</a>
                  </div>
               </div>
             </div>

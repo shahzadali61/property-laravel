@@ -136,8 +136,13 @@ a{
     color: black;
     background: none;
 }
-.right-sidebar .border-line{
+.right-sidebar .border-line,
+.border-line {
     border-bottom: 1px solid #c9cbd1;
+}
+.input-icon{
+    border: none !important;
+
 }
 
 @media only screen and (max-width: 1200px) {
