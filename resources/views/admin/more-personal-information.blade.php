@@ -39,23 +39,21 @@
                 <div class="row">
                    <div class="col-lg-9 mx-auto ">
                    <div class="multi-tabs">
-                    <ul class="nav nav-tabs " id="myTab" role="tablist">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item" role="presentation">
-                          <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Personal Details</button>
+                            <button class="nav-link active disabled-tab" id="home-tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Personal Details</button>
+                        </li>
+
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link disabled-tab" id="address-tab" data-bs-target="#address-tab-pane" type="button" role="tab" aria-controls="address-tab-pane" aria-selected="false">Address</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                          <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Address</button>
+                            <button class="nav-link disabled-tab" id="contact-tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Contact</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                          <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Contact</button>
-
+                            <button class="nav-link disabled-tab" id="disabled-tab" data-bs-target="#disabled-tab-pane" type="button" role="tab" aria-controls="disabled-tab-pane" aria-selected="false">Guarantor</button>
                         </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane" type="button" role="tab" aria-controls="disabled-tab-pane" aria-selected="false">Guarantor</button>
-                          </li>
-
-
-                      </ul>
+                    </ul>
                       <div class="tab-content" id="myTabContent">
                         <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
 
@@ -123,8 +121,8 @@
                                     <div class="mt-5">
                                         <a href="#" class="btn btn-outline-secondary btn-lg mx-1">Cancel</a>
                                         <a href="#" class="btn btn-outline-secondary btn-lg mx-1">Back</a>
-                                        <a class="btn btn-primary rounded-2 waves-effect mx-1" href="#"> Add Address <i
-                                            class="ri-arrow-right-circle-line"></i></a>
+                                       <a id="add-address-btn" class="btn btn-primary rounded-2 waves-effect mx-1" href="#">Add Address <i class="ri-arrow-right-circle-line"></i></a>
+
 
                                     </div>
 
@@ -132,7 +130,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                        <div class="tab-pane fade" id="address-tab-pane" role="tabpanel" aria-labelledby="address-tab" tabindex="0">
                             <div class="row  border-line py-5 ">
                                 <div class="col-lg-6 col-12">
                                     <div class="mb-md-5 mb-2">
@@ -202,8 +200,8 @@
                                     <div class="mt-5">
                                         <a href="#" class="btn btn-outline-secondary btn-lg mx-1">Cancel</a>
                                         <a href="#" class="btn btn-outline-secondary btn-lg mx-1">Back</a>
-                                        <a class="btn btn-primary rounded-2 waves-effect mx-1" href="#">Add Contact <i
-                                            class="ri-arrow-right-circle-line"></i></a>
+                                        <button id="add-contact-btn" class="btn btn-primary rounded-2 waves-effect mx-1" >Add Contact <i
+                                            class="ri-arrow-right-circle-line"></i></button>
 
                                     </div>
 
@@ -268,8 +266,8 @@
                                     <div class="mt-5">
                                         <a href="#" class="btn btn-outline-secondary btn-lg mx-1">Cancel</a>
                                         <a href="#" class="btn btn-outline-secondary btn-lg mx-1">Back</a>
-                                        <a class="btn btn-primary rounded-2 waves-effect mx-1" href="#"> Add Guaranter <i
-                                            class="ri-arrow-right-circle-line"></i></a>
+                                        <button id="add-guarantor-btn" class="btn btn-primary rounded-2 waves-effect mx-1" > Add Guaranter <i
+                                            class="ri-arrow-right-circle-line"></i></button>
 
                                     </div>
 
@@ -322,9 +320,9 @@
                                     </div>
                                     <div class="mt-5">
                                         <a href="#" class="btn btn-outline-secondary btn-lg mx-1">Cancel</a>
-                                        <a href="#" class="btn btn-outline-secondary btn-lg mx-1">Back</a>
-                                        <a class="btn btn-primary rounded-2 waves-effect mx-1" href="#"> Next | Requirements  <i
-                                            class="ri-arrow-right-circle-line"></i></a>
+                                        <button  class="btn btn-outline-secondary btn-lg mx-1 add-contact-btn">Back</button>
+                                        <button class="btn btn-primary rounded-2 waves-effect mx-1" > Next | Requirements  <i
+                                            class="ri-arrow-right-circle-line"></i></button>
 
                                     </div>
 
@@ -348,7 +346,7 @@
 
 @push('css')
 <style>
- 
+
 
     .step-indicator div {
         display: flex;
@@ -392,4 +390,36 @@
        color: black;
     }
 </style>
+@endpush
+@push('js')
+<script>
+  $(document).ready(function () {
+    // Prevent default behavior of clicking on tabs
+    $("#myTab button").on("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation(); // Stop event bubbling
+    });
+
+    // Allow navigation only via jQuery buttons
+    $("#add-address-btn").click(function (e) {
+        e.preventDefault();
+        var nextTab = new bootstrap.Tab($("#address-tab"));
+        nextTab.show();
+    });
+
+    $("#add-contact-btn").click(function (e) {
+        e.preventDefault();
+        var nextTab = new bootstrap.Tab($("#contact-tab"));
+        nextTab.show();
+    });
+
+    $("#add-guarantor-btn").click(function (e) {
+        e.preventDefault();
+        var nextTab = new bootstrap.Tab($("#disabled-tab"));
+        nextTab.show();
+    });
+});
+
+</script>
+
 @endpush
