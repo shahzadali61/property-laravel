@@ -16,6 +16,9 @@ Route::get('add-applicant', function () {
 Route::get('personal-detail', function () {
     return view('admin.more-personal-information');
 })->name('personal-detail');
+Route::get('personal-detail-part-2', function () {
+    return view('admin.more-personal-information-part2');
+})->name('personal-detail-part-2');
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

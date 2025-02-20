@@ -4,26 +4,13 @@
 <div class="row">
     <div class="col-12 pb-5">
         <div class="card">
-            <div class="d-sm-flex justify-content-sm-between card-header table-header">
+            <div class="border-line  card-header table-header ">
                 <div class="d-flex align-items-center mb-3 flex-wrap">
                     <h5 class="mb-0">Create new applicant</h5>
                 </div>
-                <div class="d-flex align-items-center flex-wrap">
-                    <div class="btn-group px-2 ml-0 mb-2">
-                        <a href="#" class="btn btn-outline-info rounded-2 waves-effect">Add another applicant
-                            contact</a>
-                    </div>
-                    <div class="btn-group px-2 ml-0 mb-2">
-                        <a href="{{ route('personal-detail') }}" class="btn btn-outline-info rounded-2 waves-effect">More personal
-                            Information</a>
-                    </div>
-                    <div class="ml-0 mb-2">
-                        <a class="btn btn-primary rounded-2 waves-effect" href="#"> Next | Requirements <i
-                                class="ri-arrow-right-circle-line"></i></a>
-                    </div>
-                </div>
+
             </div>
-            <div class="card-body">
+            <div class="card-body mt-5">
                 <div class="step-indicator d-flex justify-content-between mb-4">
                     <div class="step-header active"><span class="circle">1</span> General Info. <p
                             class="indicator-line mb-0 ms-2"></p>
@@ -115,7 +102,7 @@
                                 <div class="col-12 mt-5 text-end">
                                     <div>
                                         <a href="#" class="btn btn-outline-info btn-lg px-5">Add another applicant contact</a>
-                                    <a href="#" class="btn btn-outline-info btn-lg px-5 mx-1">More personal Information</a>
+                                        <a href="{{ route('personal-detail-part-2') }}" class="btn btn-outline-info btn-lg px-5 mx-1">More personal Information</a>
 
                                     </div>
                                     <div class="mt-5">
@@ -315,7 +302,7 @@
                                 <div class="col-12 mt-5 text-end">
                                     <div>
                                         <a href="#" class="btn btn-outline-info btn-lg px-5">Add another applicant contact</a>
-                                    <a href="#" class="btn btn-outline-info btn-lg px-5 mx-1">More personal Information</a>
+                                    <a href="{{ route('personal-detail-part-2') }}" class="btn btn-outline-info btn-lg px-5 mx-1">More personal Information</a>
 
                                     </div>
                                     <div class="mt-5">
@@ -343,54 +330,6 @@
     </div>
 </div>
 @endsection
-
-@push('css')
-<style>
-
-
-    .step-indicator div {
-        display: flex;
-        align-items: center;
-    }
-    .step-indicator .step-header .indicator-line {
-        width: 107px;
-        height: 2px;
-        background: #e4e8ee;
-    }
-
-
-    .step-indicator .active .indicator-line {
-        width: 107px;
-        height: 2px;
-        background: #7b8caa;
-    }
-
-    .step-indicator .circle {
-        display: inline-block;
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        /* background: ; */
-        color: rgb(255, 94, 0);
-        border: 1px solid rgb(255, 94, 0);
-        line-height: 30px;
-        text-align: center;
-        font-weight: bold;
-        position: relative;
-        z-index: 1;
-        margin-right: 7px;
-    }
-
-    .step-indicator .active .circle {
-        background: rgb(255, 94, 0);
-        color: white;
-    }
-    .step-indicator .active  {
-       font-weight: 800;
-       color: black;
-    }
-</style>
-@endpush
 @push('js')
 <script>
   $(document).ready(function () {
