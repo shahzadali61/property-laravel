@@ -11,7 +11,7 @@
 
             </div>
             <div class="card-body mt-5">
-                <div class="step-indicator d-flex justify-content-between mb-4">
+                <div class="step-indicator d-flex flex-wrap  justify-content-xl-between mb-4">
                     <div class="step-header active"><span class="circle">1</span> General Info. <p
                             class="indicator-line mb-0 ms-2"></p>
                     </div>

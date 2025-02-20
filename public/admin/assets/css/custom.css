@@ -165,10 +165,12 @@ a{
 }
 .step-indicator {
 margin-top: 40px;
+
 }
     .step-indicator div {
         display: flex;
         align-items: center;
+        margin-bottom: 10px;
     }
     .step-indicator .step-header .indicator-line {
         width: 107px;

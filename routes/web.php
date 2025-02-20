@@ -19,6 +19,10 @@ Route::get('personal-detail', function () {
 Route::get('personal-detail-part-2', function () {
     return view('admin.more-personal-information-part2');
 })->name('personal-detail-part-2');
+Route::get('search-criteria', function () {
+    return view('admin.search-criteria');
+})->name('search-criteria');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -29,4 +33,4 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
