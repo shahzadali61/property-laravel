@@ -22,21 +22,21 @@
     <link rel="stylesheet" href="{{url('admin/assets/vendor/fonts/remixicon/remixicon.css') }}" />
 
     <!-- Menu waves for no-customizer fix -->
-    <link rel="stylesheet" href="{{ url('admin/assets/vendor/libs/node-waves/node-waves.css') }}" />
+    {{-- <link rel="stylesheet" href="{{ url('admin/assets/vendor/libs/node-waves/node-waves.css') }}" /> --}}
 
     <!-- Core CSS -->
     <link rel="stylesheet" href="{{ url('admin/assets/vendor/css/core.css') }}" class="template-customizer-core-css" />
-    <link rel="stylesheet" href="{{ url('admin/assets/vendor/css/theme-default.css') }}" class="template-customizer-theme-css" />
-    <link rel="stylesheet" href="{{ url('admin/assets/css/demo.css') }}" />
+    {{-- <link rel="stylesheet" href="{{ url('admin/assets/vendor/css/theme-default.css') }}" class="template-customizer-theme-css" /> --}}
+    {{-- <link rel="stylesheet" href="{{ url('admin/assets/css/demo.css') }}" /> --}}
 
     <!-- Vendors CSS -->
-    <link rel="stylesheet" href="{{ url('admin/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css') }}" />
-    <link rel="stylesheet" href="{{ url('admin/assets/vendor/libs/apex-charts/apex-charts.css') }}" />
+    {{-- <link rel="stylesheet" href="{{ url('admin/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css') }}" /> --}}
+    {{-- <link rel="stylesheet" href="{{ url('admin/assets/vendor/libs/apex-charts/apex-charts.css') }}" /> --}}
     <link rel="stylesheet" href="{{ url('admin/assets/css/auth.css') }}" />
     <link rel="stylesheet" href="{{ url('admin/assets/css/custom.css') }}" />
 
     @stack('css')
-    <script src="{{ url('admin/assets/vendor/js/helpers.js') }}"></script>
+  
 
-    <script src="{{ url('admin/assets/js/config.js') }}"></script>
+    {{-- <script src="{{ url('admin/assets/js/config.js') }}"></script> --}}
   </head>

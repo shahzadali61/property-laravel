@@ -34,6 +34,7 @@
 .btn-primary {
     background-color: rgb(255, 94, 0);
     border-color: rgb(255, 94, 0);
+    color: white;
 }
 
 .btn-primary:hover,
@@ -43,6 +44,7 @@
     background-color: rgb(248, 113, 34) !important;
     border-color: rgb(248, 113, 34) !important;
     box-shadow: none !important; /* Removes any Bootstrap hover/focus effects */
+    color: white;
 }
 .text-primary{
     color: rgb(255, 94, 0) !important;
@@ -158,11 +160,14 @@ a{
 .multi-tabs .nav-tabs .nav-link.active{
    color: black ;
 }
+.menu-vertical .menu-item .menu-link{
+    color: #a7b2c6;
+}
 .nav-tabs .nav-link.active {
     /* border-bottom: 3px solid red !important; */
 }
 .nav-pills .nav-link.active:focus {
-    
+
 }
 
 
