@@ -22,6 +22,12 @@ Route::get('personal-detail-part-2', function () {
 Route::get('search-criteria', function () {
     return view('admin.search-criteria');
 })->name('search-criteria');
+Route::get('internal-info', function () {
+    return view('admin.internal-info');
+})->name('internal-info');
+Route::get('weblogin', function () {
+    return view('admin.weblogin');
+})->name('weblogin');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

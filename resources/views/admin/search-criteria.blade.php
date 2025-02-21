@@ -19,9 +19,9 @@
             <div class="step-header active"><span class="circle">1</span> General Info. <p
                     class="indicator-line mb-0 ms-2"></p>
             </div>
-            <div class="step-header"><span class="circle">2</span> Requirements<p class="indicator-line mb-0 ms-2"></p>
+            <div class="step-header active"><span class="circle">2</span> Requirements<p class="indicator-line mb-0 ms-2"></p>
             </div>
-            <div class="step-header"><span class="circle">3</span> Internal Info<p class="indicator-line mb-0 ms-2"></p>
+            <div class="step-header "><span class="circle ">3</span> Internal Info<p class="indicator-line mb-0 ms-2"></p>
             </div>
             <div class="step-header"><span class="circle">4</span> Web Login<p class="indicator-line mb-0 ms-2"></p>
             </div>
@@ -164,24 +164,24 @@
     </div>
     <div class="col-12 d-flex flex-wrap">
         <div class="form-check mt-4 mx-3">
-            <input class="form-check-input all-propert-select" type="checkbox" value="">
+            <input class="form-check-input all-property-select" type="checkbox" value="">
             <label class="form-check-label">Select All</label>
         </div>
         <div class="form-check mt-4 mx-3">
-            <input class="form-check-input propert-checkbox" type="checkbox" value="">
-            <label class="form-check-label">Select All</label>
+            <input class="form-check-input property-checkbox" type="checkbox" value="">
+            <label class="form-check-label">Commercial</label>
         </div>
         <div class="form-check mt-4 mx-3">
-            <input class="form-check-input propert-checkbox" type="checkbox" value="">
-            <label class="form-check-label">Select All</label>
+            <input class="form-check-input property-checkbox" type="checkbox" value="">
+            <label class="form-check-label">Land</label>
         </div>
         <div class="form-check mt-4 mx-3">
-            <input class="form-check-input propert-checkbox" type="checkbox" value="">
-            <label class="form-check-label">Select All</label>
+            <input class="form-check-input property-checkbox" type="checkbox" value="">
+            <label class="form-check-label">New Build</label>
         </div>
         <div class="form-check mt-4 mx-3">
-            <input class="form-check-input propert-checkbox" type="checkbox" value="">
-            <label class="form-check-label">Select All</label>
+            <input class="form-check-input property-checkbox" type="checkbox" value="">
+            <label class="form-check-label">New Homes</label>
         </div>
 
     </div>
@@ -198,20 +198,13 @@
         </div>
         <div class="form-check mt-4 mx-3">
             <input class="form-check-input features-checkbox" type="checkbox" value="">
-            <label class="form-check-label">Select All</label>
+            <label class="form-check-label">Letting PW</label>
         </div>
         <div class="form-check mt-4 mx-3">
             <input class="form-check-input features-checkbox" type="checkbox" value="">
-            <label class="form-check-label">Select All</label>
+            <label class="form-check-label">Letting PW</label>
         </div>
-        <div class="form-check mt-4 mx-3">
-            <input class="form-check-input features-checkbox" type="checkbox" value="">
-            <label class="form-check-label">Select All</label>
-        </div>
-        <div class="form-check mt-4 mx-3">
-            <input class="form-check-input features-checkbox" type="checkbox" value="">
-            <label class="form-check-label">Select All</label>
-        </div>
+
 
     </div>
 
@@ -221,7 +214,7 @@
         <div class="mb-md-5 mb-2">
             <label class="form-label">Property required by</label>
             <div class="input-group">
-                <input type="date" class="form-control rounded-2" placeholder="Choose date">
+                <input type="date" class="form-control rounded-2 " placeholder="Choose date">
                 <span class="input-group-text cursor-pointer input-icon"><i class="ri-calendar-line"></i></span>
             </div>
         </div>
@@ -313,8 +306,8 @@
         <div class="mt-5">
 
             <button class="btn btn-outline-secondary btn-lg mx-1 add-contact-btn">Cancel</button>
-            <button class="btn btn-primary rounded-2 waves-effect mx-1">Add Address <i
-                    class="ri-arrow-right-circle-line"></i></button>
+            <a href="{{ route('internal-info') }}" class="btn btn-primary rounded-2 waves-effect mx-1">Internal Info <i
+                    class="ri-arrow-right-circle-line"></i></a>
 
         </div>
 
@@ -327,9 +320,9 @@
 <script>
     $(document).ready(function () {
         // When "Select All" checkbox is clicked
-        $(".all-propert-select").click(function () {
+        $(".all-property-select").click(function () {
             var isChecked = $(this).prop("checked"); // Get the checked status
-            $(".propert-checkbox").each(function () {
+            $(".property-checkbox").each(function () {
                 $(this).prop("checked", isChecked); // Apply the same checked status to all checkboxes
             });
         });
