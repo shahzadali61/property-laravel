@@ -118,7 +118,7 @@
     </div>
     <div class="col-lg-10 mx-auto text-end mt-3">
         <button type="reset" class="btn btn-outline-secondary">Cancel</button>
-        <a href="" class="btn btn-primary">Attachments <i
+        <a href="{{ route('attachments') }}" class="btn btn-primary">Attachments <i
             class="ri-arrow-right-circle-line"></i></a>
 
     </div>

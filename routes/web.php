@@ -28,6 +28,9 @@ Route::get('internal-info', function () {
 Route::get('weblogin', function () {
     return view('admin.weblogin');
 })->name('weblogin');
+Route::get('attachments', function () {
+    return view('admin.attachments');
+})->name('attachments');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
