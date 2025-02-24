@@ -24,17 +24,17 @@
                 </div>
             </div>
             <div class="card-body">
-                <div class="step-indicator d-flex flex-lg-nowrap flex-wrap justify-content-lg-between mb-4">
-                    <div class="step-header active mb-lg-0 mb-3"><span class="circle">1</span> General Info. <p
+                <div class="step-indicator d-flex flex-wrap   mb-4">
+                    <div class="step-header active"><span class="circle">1</span> General Info. <p
                             class="indicator-line mb-0 ms-2"></p>
                     </div>
-                    <div class="step-header mb-lg-0 mb-3"><span class="circle">2</span> Requirements<p
+                    <div class="step-header"><span class="circle">2</span> Requirements<p
                         class="indicator-line mb-0 ms-2"></p></div>
-                    <div class="step-header mb-lg-0 mb-3"><span class="circle">3</span> Internal Info<p
+                    <div class="step-header"><span class="circle">3</span> Internal Info<p
                         class="indicator-line mb-0 ms-2"></p></div>
-                    <div class="step-header mb-lg-0 mb-3"><span class="circle">4</span> Web Login<p
+                    <div class="step-header"><span class="circle">4</span> Web Login<p
                         class="indicator-line mb-0 ms-2"></p></div>
-                    <div class="step-header mb-lg-0 mb-3"><span class="circle">5</span> Attachments</div>
+                    <div class="step-header"><span class="circle">5</span> Attachments</div>
                 </div>
                 <div class="row">
                     <div class="col-12 border-line py-5">
