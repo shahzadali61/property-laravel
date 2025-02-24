@@ -66,8 +66,9 @@
                             <div class="input-group input-group-merge mb-6 bg-white">
 
                                 <span class="input-group-text"> <i class="ri-user-line ri-20px"></i></span>
-                                <input type="text" class="form-control" placeholder="Userrname">
+                                <input type="text" class="form-control" placeholder="Enter email / username">
                             </div>
+
                         </div>
                         <div class="col-md-6">
 
