@@ -41,7 +41,14 @@
                 <li class="menu-item {{ request()->routeIs('summary')? 'active' : '' }}">
                     <a href="{{ route('summary') }}" class="menu-link">
                         <div>Summary
-                            
+
+                        </div>
+                    </a>
+                </li>
+                <li class="menu-item {{ request()->routeIs('communication')? 'active' : '' }}">
+                    <a href="{{ route('communication') }}" class="menu-link">
+                        <div>communication
+
                         </div>
                     </a>
                 </li>

@@ -31,6 +31,9 @@ Route::get('weblogin', function () {
 Route::get('attachments', function () {
     return view('admin.attachments');
 })->name('attachments');
+Route::get('communication', function () {
+    return view('admin.communication');
+})->name('communication');
 Route::get('summary', function () {
     return view('admin.summary');
 })->name('summary');
