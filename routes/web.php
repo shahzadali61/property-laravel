@@ -31,6 +31,9 @@ Route::get('weblogin', function () {
 Route::get('attachments', function () {
     return view('admin.attachments');
 })->name('attachments');
+Route::get('summary', function () {
+    return view('admin.summary');
+})->name('summary');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

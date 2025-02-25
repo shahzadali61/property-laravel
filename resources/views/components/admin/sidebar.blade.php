@@ -26,14 +26,29 @@
                 </li>
             </ul>
         </li>
-
-        <!-- Data Tables -->
-        <li class="menu-item {{ request()->routeIs('applicants') || request()->routeIs('add-applicant') || request()->routeIs('personal-detail') ? 'active' : '' }}">
-            <a href="{{ route('applicants') }}" class="menu-link">
-                <i class="menu-icon tf-icons ri-grid-line"></i>
-                <div data-i18n="Applicant">Applicant</div>
+        <li class="menu-item  {{ request()->routeIs('applicants') || request()->routeIs('add-applicant') || request()->routeIs('personal-detail') ? 'active' : '' }}">
+            <a href="#" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons ri-layout-2-line"></i>
+                <div data-i18n="Layouts">Applicant</div>
             </a>
+
+            <ul class="menu-sub">
+                <li class="menu-item {{ request()->routeIs('applicants') || request()->routeIs('add-applicant') || request()->routeIs('personal-detail') ? 'active' : '' }}">
+                    <a href="{{ route('applicants') }}" class="menu-link">
+                        <div>Applicant List</div>
+                    </a>
+                </li>
+                <li class="menu-item {{ request()->routeIs('summary')? 'active' : '' }}">
+                    <a href="{{ route('summary') }}" class="menu-link">
+                        <div>Summary
+                            
+                        </div>
+                    </a>
+                </li>
+            </ul>
         </li>
+
+
 
         <!-- Misc -->
         <li class="menu-header mt-7"><span class="">Preference</span></li>
