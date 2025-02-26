@@ -4,7 +4,7 @@
 
     <div class="col-12 horizone-line pb-5">
         <div class="card">
-            
+
             <div class=" d-sm-flex justify-content-sm-between  card-header table-header horizone-line ">
 
               <div class="d-flex align-items-center mb-3 flex-wrap">
@@ -166,6 +166,7 @@
                                     <span class="badge rounded-pill bg-label-secondary">Banglow</span>
                                     <span class="badge rounded-pill bg-label-secondary">Commercial</span>
                                     <span class="badge badge-center rounded-pill bg-secondary">+9</span>
+                                    
                                 </td>
                                 <td>12/6/24</td>
                                 <td>

@@ -164,7 +164,7 @@
                         <li><a class="dropdown-item waves-effect" href="javascript:void(0);">Separated link</a></li>
                     </ul>
                 </div>
-                <a href="" class="btn btn-outline-secondary"><i class="ri-add-circle-line"></i>Add todo</a>
+                <button class="btn btn-outline-secondary rounded-2  waves-effect " type="button" data-bs-toggle="offcanvas" data-bs-target="#addToDo" aria-controls="addToDo"> <i class="ri-add-circle-line"></i>Add todo</button>
             </div>
 
         </div>
@@ -176,7 +176,7 @@
                 <thead>
                     <tr>
                         <th scope="col">
-                            <input class="form-check-input me-2" type="checkbox" id="selectAll"> IR
+                            <input class="form-check-input me-2" type="checkbox" id="toDoSelectAll"> IR
                         </th>
                         <th scope="col">Lettings</th>
                         <th scope="col">Action</th>
@@ -375,10 +375,54 @@
         </div>
     </div>
 </div>
+<div class="offcanvas offcanvas-end right-sidebar"tabindex="-1" data-bs-backdrop="false" id="addToDo" aria-labelledby="addToDoLabel">
+    <div class="offcanvas-header justify-content-sm-between mx-2 flex-wrap flex-sm-nowrap">
+        <div class="d-flex align-items-center">
+            <button type="button" class=" d-flex justify-content-center align-items-center close-btn me-2" data-bs-dismiss="offcanvas" aria-label="Close"><i class="ri-arrow-left-s-line"></i></button>
+            <h4 class="offcanvas-title" id="addToDoLabel">Log notes</h4>
+        </div>
+       <div>
+        <button class="btn btn-primary save-btn mt-sm-0 mt-2">Save</button>
+
+       </div>
+    </div>
+
+    <div class="offcanvas-body px-5">
+        <div class="row">
+            <div class="col-lg-10 mx-auto d-flex align-items-center justify-content-between">
+                <h5>
+                    Add note details
+                </h5>
+                <div>
+                     <span>From</span>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-outline-secondary dropdown-toggle waves-effect" data-bs-toggle="dropdown" aria-expanded="false">Note</button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item waves-effect" href="javascript:void(0);">Action</a></li>
+                          <li><a class="dropdown-item waves-effect" href="javascript:void(0);">Another action</a></li>
+                          <li><a class="dropdown-item waves-effect" href="javascript:void(0);">Something else here</a></li>
+                          <li>
+                            <hr class="dropdown-divider">
+                          </li>
+                          <li><a class="dropdown-item waves-effect" href="javascript:void(0);">Separated link</a></li>
+                        </ul>
+                      </div>
+                </div>
+            </div>
+            <div class="col-lg-10 mx-auto mt-5">
+                <textarea  class="form-control" style="height: 300px;" placeholder="Add note details here"></textarea>
+
+
+            </div>
+
+        </div>
+
+        </div>
+    </div>
 @push('js')
 
 <script>
-    document.getElementById('selectAll').addEventListener('change', function() {
+    document.getElementById('toDoSelectAll').addEventListener('change', function() {
         let checkboxes = document.querySelectorAll('.todo');
         checkboxes.forEach(checkbox => {
             checkbox.checked = this.checked;

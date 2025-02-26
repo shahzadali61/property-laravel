@@ -53,14 +53,14 @@
     <div class="col-lg-10 mx-auto border-line py-5">
         <div class="d-flex align-items-center justify-content-between  mb-3 flex-wrap">
             <h5 class="mb-0">Communication Logs</h5>
-            <div class="d-flex flex-wrap p-sm-0 p-5">
-                <div class="form-check mt-4 px-2">
+            <div class="d-flex flex-wrap p-sm-0 p-5 ms-5 ms-lg-0">
+                <div class="form-check mt-4 px-2 mb-md-0 mb-2">
                     <input class="form-check-input" type="radio" value="">
                     <label class="form-check-label">
                         View archived todo
                     </label>
                 </div>
-                <div class="btn-group px-2">
+                <div class="btn-group px-2 mb-md-0 mb-2">
                     <button type="button" class="btn btn-outline-secondary dropdown-toggle waves-effect"
                         data-bs-toggle="dropdown" aria-expanded="false">show all</button>
                     <ul class="dropdown-menu">
@@ -74,14 +74,14 @@
                         <li><a class="dropdown-item waves-effect" href="javascript:void(0);">Separated link</a></li>
                     </ul>
                 </div>
-                <div class="form-check mt-4">
+                <div class="form-check mt-4 mb-md-0 mb-2">
                     <input name="default-radio-1" class="form-check-input" type="radio" value="" id="defaultRadio1">
                     <label class="form-check-label" for="defaultRadio1">
                         Show all
                     </label>
                   </div>
-                <a href="" class="btn btn-outline-secondary mx-1"><i class="ri-file-cloud-line"></i>Export</a>
-                <a href="" class="btn btn-outline-secondary mx-1"><i class="ri-list-check"></i>Log notes</a>
+                <a href="" class="btn btn-outline-secondary mx-1 mb-md-0 mb-2"><i class="ri-file-cloud-line"></i>Export</a>
+                <a href="" class="btn btn-outline-secondary mx-1 mb-md-0 mb-2"><i class="ri-list-check"></i>Log notes</a>
             </div>
 
         </div>

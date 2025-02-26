@@ -309,9 +309,13 @@ margin-top: 40px;
         position: fixed;
         width: 100%;
     }
+    .right-sidebar{
+        width: 70% !important;
+    }
 
 }
 @media only screen and (max-width: 768px) {
+
 
 }
 @media only screen and (max-width: 576px) {
