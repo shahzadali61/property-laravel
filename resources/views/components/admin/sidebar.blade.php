@@ -72,6 +72,12 @@
                         </div>
                     </a>
                 </li>
+                <li class="menu-item {{ request()->routeIs('personal-info')? 'active' : '' }}">
+                    <a href="{{ route('personal-info') }}" class="menu-link">
+                        <div>Personal Info
+                        </div>
+                    </a>
+                </li>
             </ul>
         </li>
 

@@ -46,6 +46,9 @@ Route::get('viewing', function () {
 Route::get('offers', function () {
     return view('admin.offers');
 })->name('offers');
+Route::get('personal-info', function () {
+    return view('admin.personal-info');
+})->name('personal-info');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
