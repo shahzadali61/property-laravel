@@ -37,6 +37,15 @@ Route::get('communication', function () {
 Route::get('summary', function () {
     return view('admin.summary');
 })->name('summary');
+Route::get('matching-properties', function () {
+    return view('admin.matching-properties');
+})->name('matching-properties');
+Route::get('viewing', function () {
+    return view('admin.viewing');
+})->name('viewing');
+Route::get('offers', function () {
+    return view('admin.offers');
+})->name('offers');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

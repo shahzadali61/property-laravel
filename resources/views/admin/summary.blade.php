@@ -379,7 +379,7 @@
     <div class="offcanvas-header justify-content-sm-between mx-2 flex-wrap flex-sm-nowrap">
         <div class="d-flex align-items-center">
             <button type="button" class=" d-flex justify-content-center align-items-center close-btn me-2" data-bs-dismiss="offcanvas" aria-label="Close"><i class="ri-arrow-left-s-line"></i></button>
-            <h4 class="offcanvas-title" id="addToDoLabel">Log notes</h4>
+            <h4 class="offcanvas-title" id="addToDoLabel">Add To DO</h4>
         </div>
        <div>
         <button class="btn btn-primary save-btn mt-sm-0 mt-2">Save</button>
@@ -391,7 +391,7 @@
         <div class="row">
             <div class="col-lg-10 mx-auto d-flex align-items-center justify-content-between">
                 <h5>
-                    Add note details
+                   Add To DO
                 </h5>
                 <div>
                      <span>From</span>

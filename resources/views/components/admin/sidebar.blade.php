@@ -52,6 +52,26 @@
                         </div>
                     </a>
                 </li>
+                <li class="menu-item {{ request()->routeIs('matching-properties')? 'active' : '' }}">
+                    <a href="{{ route('matching-properties') }}" class="menu-link">
+                        <div>matching-properties
+
+                        </div>
+                    </a>
+                </li>
+                <li class="menu-item {{ request()->routeIs('viewing')? 'active' : '' }}">
+                    <a href="{{ route('viewing') }}" class="menu-link">
+                        <div>Viewing
+
+                        </div>
+                    </a>
+                </li>
+                <li class="menu-item {{ request()->routeIs('offers')? 'active' : '' }}">
+                    <a href="{{ route('offers') }}" class="menu-link">
+                        <div>Offers
+                        </div>
+                    </a>
+                </li>
             </ul>
         </li>
 
