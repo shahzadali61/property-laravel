@@ -50,34 +50,27 @@
 
 <div class="row">
     <div class="col-lg-10 mx-auto border-line py-5">
-        <h5 class="mb-0">Activity Summary</h5>
+        <h5 class="mb-0">Internal Info
+        </h5>
     </div>
     <div class="col-lg-10 mx-auto activity-summary mt-5">
         <div class="row">
-            <div class="col-lg-4 col-6">
-                <div class="card py-2 ps-5 mb-4">
-                    <h4 class="mb-0 fw-bolder text-black">12</h4>
-                    <p>Offers Pending</p>
-                </div>
+            <div class="col-lg-2 col-md-3 col-6 mb-2">
+                <p class="mb-1 ">Negotiator</p>
+                <h6>The Black Bull</h6>
             </div>
-            <div class="col-lg-4 col-6">
-                <div class="card py-2 ps-5 mb-4">
-                    <h4 class="mb-0 fw-bolder text-black">12</h4>
-                    <p>Offers accepted</p>
-                </div>
+            <div class="col-lg-2 col-md-3 col-6 mb-2">
+                <p class="mb-1 ">Branch</p>
+                <h6>The Black Bull</h6>
             </div>
-            <div class="col-lg-4 col-6">
-                <div class="card py-2 ps-5 mb-4">
-                    <h4 class="mb-0 fw-bolder text-black">12</h4>
-                    <p>Offers declined</p>
-                </div>
+            <div class="col-lg-2 col-md-3 col-6 mb-2">
+                <p class="mb-1 ">Lead Source</p>
+                <h6>Ingatestone</h6>
             </div>
+
         </div>
     </div>
-</div>
-
-<div class="row mt-5">
-    <div class="col-lg-10 mx-auto">
+    <div class="col-lg-10 mx-auto mt-5">
         <div class="row mb-5">
             <div class="col-12">
                <div class=" d-flex align-items-center justify-content-between flex-wrap mb-2">
@@ -99,37 +92,36 @@
             </div>
 
         </div>
-        <div class="row mt-5">
-            <div class="col-lg-6 mb-4">
-                <h4>
-                    Offers accepted
-                </h4>
 
-
-               <div class="card viewing-card">
-
-                <h6>
-                    No pending viewing found
-                </h6>
-
+    </div>
+    <div class="col-lg-10 mx-auto border-line py-5">
+        <h5 class="mb-0">Custom Field
+        </h5>
+    </div>
+    <div class="col-lg-10 mx-auto activity-summary mt-5">
+        <div class="row">
+            <div class="col-lg-2 col-md-3 col-6 mb-2">
+                <p class="mb-1 ">Negotiator</p>
+                <h6>The Black Bull</h6>
             </div>
+            <div class="col-lg-2 col-md-3 col-6 mb-2">
+                <p class="mb-1 ">Branch</p>
+                <h6>The Black Bull</h6>
             </div>
-            <div class="col-lg-6 mb-4">
-                <h4>
-                    Offers declined
-                </h4>
-
-               <div class="card viewing-card">
-
-                <h6>
-                    No pending viewing found
-                </h6>
-
+            <div class="col-lg-2 col-md-3 col-6 mb-2">
+                <p class="mb-1 ">Lead Source</p>
+                <h6>Ingatestone</h6>
             </div>
-            </div>
+
         </div>
     </div>
 
+
+
 </div>
+
+
+
+
 
 @endsection

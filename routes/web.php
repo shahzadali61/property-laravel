@@ -49,6 +49,15 @@ Route::get('offers', function () {
 Route::get('personal-info', function () {
     return view('admin.personal-info');
 })->name('personal-info');
+Route::get('more-info', function () {
+    return view('admin.more-info');
+})->name('more-info');
+Route::get('web-login', function () {
+    return view('admin.web-login');
+})->name('web-login');
+Route::get('application-attachments', function () {
+    return view('admin.application-attachments');
+})->name('application-attachments');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

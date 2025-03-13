@@ -78,6 +78,24 @@
                         </div>
                     </a>
                 </li>
+                <li class="menu-item {{ request()->routeIs('more-info')? 'active' : '' }}">
+                    <a href="{{ route('more-info') }}" class="menu-link">
+                        <div>More Info
+                        </div>
+                    </a>
+                </li>
+                <li class="menu-item {{ request()->routeIs('web-login')? 'active' : '' }}">
+                    <a href="{{ route('web-login') }}" class="menu-link">
+                        <div>web-login
+                        </div>
+                    </a>
+                </li>
+                <li class="menu-item {{ request()->routeIs('application-attachments')? 'active' : '' }}">
+                    <a href="{{ route('application-attachments') }}" class="menu-link">
+                        <div>Attachments
+                        </div>
+                    </a>
+                </li>
             </ul>
         </li>
 
