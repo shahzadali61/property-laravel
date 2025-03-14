@@ -30,19 +30,19 @@
                         <span class="circle">1</span> General Info.
                         <p class="indicator-line mb-0 ms-2"></p>
                     </div>
-                    <div class="step-header step-requirements">
+                    <div class="step-header step-requirements nextStep ">
                         <span class="circle">2</span> Requirements
                         <p class="indicator-line mb-0 ms-2"></p>
                     </div>
-                    <div class="step-header step-internal-info">
+                    <div class="step-header step-internal-info InternalInfoTab ">
                         <span class="circle">3</span> Internal Info
                         <p class="indicator-line mb-0 ms-2"></p>
                     </div>
-                    <div class="step-header step-web-login">
+                    <div class="step-header step-web-login WebLoginTab ">
                         <span class="circle">4</span> Web Login
                         <p class="indicator-line mb-0 ms-2"></p>
                     </div>
-                    <div class="step-header step-attachments">
+                    <div class="step-header step-attachments AttachmentsTab ">
                         <span class="circle">5</span> Attachments
                     </div>
                 </div>
@@ -71,11 +71,9 @@
                                     </div>
                                     <div class="col-lg-4 col-sm-6 col-12">
                                         <div class="mb-md-5 mb-2">
-                                            <label class="form-label">First Name
-
-                                            </label>
-                                            <input id="GeneralInfoFirstName" class="form-control" type="text"
-                                                placeholder="Enter your first name">
+                                            <label class="form-label">First Name</label>
+                                            <input id="GeneralInfoFirstName" class="form-control" type="text" placeholder="Enter your first name">
+                                            <span id="firstNameError" class="text-danger mt-1" style="display: none;"></span>
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-sm-6 col-12">
@@ -275,7 +273,7 @@
                                 </div>
                                 <div class="mt-3">
                                     <a href="#" class="btn btn-outline-secondary btn-lg px-5">Reset</a>
-                                    <button id="nextStep" class="btn btn-primary rounded-2 waves-effect"> Next |
+                                    <button id="nextStep" class="btn btn-primary rounded-2 waves-effect nextStep"> Next |
                                         Requirements <i class="ri-arrow-right-circle-line"></i></button>
                                 </div>
 
@@ -570,7 +568,7 @@
                                     <button
                                         class="btn btn-outline-secondary btn-lg mx-1 add-contact-btn">Cancel</button>
                                     <button id="InternalInfoTab"
-                                        class="btn btn-primary rounded-2 waves-effect mx-1">Internal Info <i
+                                        class="btn btn-primary rounded-2 waves-effect mx-1 InternalInfoTab">Internal Info <i
                                             class="ri-arrow-right-circle-line"></i></button>
 
                                 </div>
@@ -602,14 +600,16 @@
                                         </select>
                                     </div>
                                     <div class="col-sm-8">
-                                        <div class="nav-item d-flex align-items-center rounded-2 border ps-3 mb-sm-0 mb-2">
+                                        <div
+                                            class="nav-item d-flex align-items-center rounded-2 border ps-3 mb-sm-0 mb-2">
                                             <i class="ri-search-line ri-22px me-2"></i>
-                                            <input type="text" class="form-control border-0 shadow-none" placeholder="Searchc..."
-                                                aria-label="Search..." />
+                                            <input type="text" class="form-control border-0 shadow-none"
+                                                placeholder="Searchc..." aria-label="Search..." />
                                         </div>
                                     </div>
                                     <div class="col-sm-4">
-                                        <button class="btn btn-outline-secondary btn-sm "><i class="ri-add-circle-line"></i>Add new Directory</button>
+                                        <button class="btn btn-outline-secondary btn-sm "><i
+                                                class="ri-add-circle-line"></i>Add new Directory</button>
                                     </div>
                                 </div>
                             </div>
@@ -722,7 +722,7 @@
                             <div class="col-lg-6">
                                 <div class="col-12 mb-3">
                                     <label for="">Comments</label>
-                                   <textarea cols="8" class="form-control" placeholder="Choose Company"></textarea>
+                                    <textarea cols="8" class="form-control" placeholder="Choose Company"></textarea>
                                 </div>
                             </div>
 
@@ -730,222 +730,218 @@
                         <div class="row">
                             <div class="col-12 text-end  mt-4">
                                 <button type="reset" class="btn btn-outline-secondary">Cancel</button>
-                                <button id="WebLoginTab" class="btn btn-primary">Web Login <i class="ri-arrow-right-circle-line"></i></button>
+                                <button id="WebLoginTab" class="btn btn-primary WebLoginTab">Web Login <i
+                                        class="ri-arrow-right-circle-line"></i></button>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div id="WebLogin" style="display: none;">
+                    </div>
+                    <div id="WebLogin" style="display: none;">
 
-                    <div class="row mb-4">
-                        <div class="col-lg-10 border-line py-5 mb-5 mx-auto">
-                            <h5>Web Login</h5>
-                        </div>
-                        <div class="col-lg-10 mx-auto border-line py-5">
-                            <div class="card-body">
-                                <div class="form-check mb-4">
-                                    <input name="account-option" id="doNotCreateAccountRadio" class="form-check-input" type="radio" value="">
-                                    <label class="form-check-label" for="doNotCreateAccountRadio">
-                                        Do not create a user account
-                                    </label>
-                                </div>
-                                <div class="form-check mb-4">
-                                    <input name="account-option" id="createAccountRadio" class="form-check-input" type="radio" value="">
-                                    <label class="form-check-label" for="createAccountRadio">
-                                        Create a new user account
-                                    </label>
-                                </div>
-
-                                <div class="form-check mb-4">
-                                    <input name="account-option" id="existingUserRadio" class="form-check-input" type="radio" value="">
-                                    <label class="form-check-label" for="existingUserRadio">
-                                        User already registered, Please enter username
-                                    </label>
-                                </div>
-
-                                <!-- Section for Creating a New User -->
-                                <div class="collapse" id="createAccountSection" style="background-color: #f8f8f8;">
-                                    <div class="p-5 ">
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <h5>Create new account</h5>
-                                            </div>
-
-                                            <div class="col-md-6">
-
-                                                <label for="newUserEmail" class="form-label">Userrname</label>
-                                                <div class="input-group input-group-merge mb-6 bg-white">
-
-                                                    <span class="input-group-text"> <i class="ri-user-line ri-20px"></i></span>
-                                                    <input type="text" class="form-control" placeholder="Enter email / username">
-                                                </div>
-
-                                            </div>
-                                            <div class="col-md-6">
-
-                                                <label for="newUserEmail" class="form-label">Password</label>
-                                                <div class="input-group input-group-merge mb-6 bg-white">
-                                                    <span class="input-group-text"><i class="ri-git-repository-private-line"></i></span>
-                                                    <input type="password" class="form-control" placeholder="***********">
-                                                </div>
-                                            </div>
-                                            <div class="col-12 text-end">
-                                                <button class="btn btn-primary">
-                                                    Create
-                                                </button>
-                                            </div>
-                                        </div>
+                        <div class="row mb-4">
+                            <div class="col-lg-10 border-line py-5 mb-5 mx-auto">
+                                <h5>Web Login</h5>
+                            </div>
+                            <div class="col-lg-10 mx-auto border-line py-5">
+                                <div class="card-body">
+                                    <div class="form-check mb-4">
+                                        <input name="account-option" id="doNotCreateAccountRadio" class="form-check-input"
+                                            type="radio" value="">
+                                        <label class="form-check-label" for="doNotCreateAccountRadio">
+                                            Do not create a user account
+                                        </label>
                                     </div>
-                                </div>
+                                    <div class="form-check mb-4">
+                                        <input name="account-option" id="createAccountRadio" class="form-check-input"
+                                            type="radio" value="">
+                                        <label class="form-check-label" for="createAccountRadio">
+                                            Create a new user account
+                                        </label>
+                                    </div>
 
-                                <!-- Section for Existing User Login -->
-                                <div class="collapse" id="existingUserSection" style="background-color: #f8f8f8;">
-                                    <div class="p-5 ">
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <h5>Create new account</h5>
-                                            </div>
+                                    <div class="form-check mb-4">
+                                        <input name="account-option" id="existingUserRadio" class="form-check-input"
+                                            type="radio" value="">
+                                        <label class="form-check-label" for="existingUserRadio">
+                                            User already registered, Please enter username
+                                        </label>
+                                    </div>
 
-                                            <div class="col-md-8">
+                                    <!-- Section for Creating a New User -->
+                                    <div class="collapse" id="createAccountSection" style="background-color: #f8f8f8;">
+                                        <div class="p-5 ">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <h5>Create new account</h5>
+                                                </div>
 
-                                                <div>
+                                                <div class="col-md-6">
+
                                                     <label for="newUserEmail" class="form-label">Userrname</label>
                                                     <div class="input-group input-group-merge mb-6 bg-white">
 
-                                                        <span class="input-group-text"> <i class="ri-user-line ri-20px"></i></span>
-                                                        <input type="text" class="form-control" placeholder="Enter email / username">
+                                                        <span class="input-group-text"> <i
+                                                                class="ri-user-line ri-20px"></i></span>
+                                                        <input type="text" class="form-control"
+                                                            placeholder="Enter email / username">
+                                                    </div>
+
+                                                </div>
+                                                <div class="col-md-6">
+
+                                                    <label for="newUserEmail" class="form-label">Password</label>
+                                                    <div class="input-group input-group-merge mb-6 bg-white">
+                                                        <span class="input-group-text"><i
+                                                                class="ri-git-repository-private-line"></i></span>
+                                                        <input type="password" class="form-control" placeholder="***********">
                                                     </div>
                                                 </div>
-                                                <button class="btn btn-secondary">
-                                                    Check Username
-                                                </button>
+                                                <div class="col-12 text-end">
+                                                    <button class="btn btn-primary">
+                                                        Create
+                                                    </button>
+                                                </div>
                                             </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Section for Existing User Login -->
+                                    <div class="collapse" id="existingUserSection" style="background-color: #f8f8f8;">
+                                        <div class="p-5 ">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <h5>Create new account</h5>
+                                                </div>
+
+                                                <div class="col-md-8">
+
+                                                    <div>
+                                                        <label for="newUserEmail" class="form-label">Userrname</label>
+                                                        <div class="input-group input-group-merge mb-6 bg-white">
+
+                                                            <span class="input-group-text"> <i
+                                                                    class="ri-user-line ri-20px"></i></span>
+                                                            <input type="text" class="form-control"
+                                                                placeholder="Enter email / username">
+                                                        </div>
+                                                    </div>
+                                                    <button class="btn btn-secondary">
+                                                        Check Username
+                                                    </button>
+                                                </div>
 
 
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-10 mx-auto text-end mt-3">
-                            <button type="reset" class="btn btn-outline-secondary">Cancel</button>
-                            <button id="AttachmentsTab"  class="btn btn-primary">Attachments <i
-                                class="ri-arrow-right-circle-line"></i></button>
+                            <div class="col-lg-10 mx-auto text-end mt-3">
+                                <button type="reset" class="btn btn-outline-secondary">Cancel</button>
+                                <button id="AttachmentsTab" class="btn btn-primary AttachmentsTab">Attachments <i
+                                        class="ri-arrow-right-circle-line"></i></button>
 
-                        </div>
-
-                    </div>
-                </div>
-                <div id="Attachments" style="display: none;">
-
-                    <div class="row mb-4">
-                        <div class="col-lg-10 border-line py-5 mb-5 mx-auto">
-                            <h5>Attachments</h5>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto border-line py-5">
-                            <div class="upload-file p-5 d-flex align-items-center justify-content-center" id="uploadFileArea">
-                                <div class="text-center">
-                                    <i class="ri-file-line text-info fs-1 mb-5"></i>
-
-                                    <p class="text-dark fw-bolder mt-4">Click or drag file to this area to upload</p>
-                                    <p  >Support for a single or bulk upload. Strickly prohibit from uploading company data or other band files</p>
-                                    <p id="fileName" class="text-success">No file selected</p>
-                                </div>
                             </div>
-                            <input type="file" id="fileInput" style="display: none;">
 
                         </div>
                     </div>
-                    <div class="col-lg-8 mx-auto text-end mt-4">
-                        <button type="reset" class="btn btn-outline-secondary">Cancel</button>
-                        <button type="reset" class="btn btn-outline-secondary">Back</button>
-                        <button class="btn btn-primary"><i class="ri-check-double-line"></i>Finish </button>
-                    </div>
-                </div>
-                </form>
+                    <div id="Attachments" style="display: none;">
 
-            </div>
+                        <div class="row mb-4">
+                            <div class="col-lg-10 border-line py-5 mb-5 mx-auto">
+                                <h5>Attachments</h5>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-8 mx-auto border-line py-5">
+                                <div class="upload-file p-5 d-flex align-items-center justify-content-center"
+                                    id="uploadFileArea">
+                                    <div class="text-center">
+                                        <i class="ri-file-line text-info fs-1 mb-5"></i>
+
+                                        <p class="text-dark fw-bolder mt-4">Click or drag file to this area to upload</p>
+                                        <p>Support for a single or bulk upload. Strickly prohibit from uploading company data or
+                                            other band files</p>
+                                        <p id="fileName" class="text-success">No file selected</p>
+                                    </div>
+                                </div>
+                                <input type="file" id="fileInput" style="display: none;">
+
+                            </div>
+                        </div>
+                        <div class="col-lg-8 mx-auto text-end mt-4">
+                            <button type="reset" class="btn btn-outline-secondary">Cancel</button>
+                            <button type="reset" class="btn btn-outline-secondary">Back</button>
+                            <button class="btn btn-primary"><i class="ri-check-double-line"></i>Finish </button>
+                        </div>
+                    </div>
+                    </form>
+
         </div>
     </div>
+</div>
 </div>
 @endsection
 @push('js')
 <script>
-    
-$(document).ready(function () {
-    // Initially show PersonalDetailTab, hide others
-    $("#PersonalDetailTab").show();
-    $("#RequirementsTab, #InternalInformation, #WebLogin, #Attachments").hide();
+          $(document).ready(function () {
+            // Initially show PersonalDetailTab, hide others
+            $("#PersonalDetailTab").show();
+            $("#RequirementsTab, #InternalInformation, #WebLogin, #Attachments").hide();
 
-    // When clicking "Next | Requirements"
-    $("#nextStep").click(function (e) {
-        e.preventDefault();
+            function showStep(currentTab, nextTab, currentStep, nextStep) {
+                $(currentTab).hide();
+                $(nextTab).show();
+                $(currentStep).addClass("active");
+                $(nextStep).addClass("active");
+            }
 
-        let firstNameInput = $("#GeneralInfoFirstName");
+            // When clicking "Next | Requirements"
+            $(".nextStep").click(function (e) {
+                e.preventDefault();
 
-        // Check if First Name is filled
-        if (firstNameInput.val().trim() === "") {
-            alert("First Name is required");
-            firstNameInput.focus();
-        } else {
-            // Hide PersonalDetailTab and show RequirementsTab
-            $("#PersonalDetailTab").hide();
-            $("#RequirementsTab").show();
+                let firstNameInput = $("#GeneralInfoFirstName");
+                let errorMessage = $("#firstNameError");
 
-            // Keep previous steps active and add "active" class
-            $(".step-general-info").addClass("active");
-            $(".step-requirements").addClass("active");
-        }
-    });
+                if (firstNameInput.val().trim() === "") {
+                    errorMessage.text("First Name is required").show();
+                    firstNameInput.addClass("is-invalid");
+                    return;
+                }
 
-    // When clicking "Internal Info"
-    $("#InternalInfoTab").click(function (e) {
-        e.preventDefault();
+                errorMessage.hide();
+                firstNameInput.removeClass("is-invalid");
 
-        // Hide RequirementsTab and show InternalInformation
-        $("#RequirementsTab").hide();
-        $("#InternalInformation").show();
+                showStep("#PersonalDetailTab", "#RequirementsTab", ".step-general-info", ".step-requirements");
+            });
 
-        // Keep previous steps active and add "active" class
-        $(".step-general-info").addClass("active");
-        $(".step-requirements").addClass("active");
-        $(".step-internal-info").addClass("active");
-    });
+            // When clicking "Internal Info"
+            $(".InternalInfoTab").click(function (e) {
+                e.preventDefault();
+                showStep("#RequirementsTab", "#InternalInformation", ".step-requirements", ".step-internal-info");
+            });
 
-    // When clicking "Web Login"
-    $("#WebLoginTab").click(function (e) {
-        e.preventDefault();
+            // When clicking "Web Login"
+            $(".WebLoginTab").click(function (e) {
+                e.preventDefault();
+                showStep("#InternalInformation", "#WebLogin", ".step-internal-info", ".step-web-login");
+            });
 
-        // Hide InternalInformation and show WebLogin
-        $("#InternalInformation").hide();
-        $("#WebLogin").show();
+            // When clicking "Attachments"
+            $(".AttachmentsTab").click(function (e) {
+                e.preventDefault();
+                showStep("#WebLogin", "#Attachments", ".step-web-login", ".step-attachments");
+            });
 
-        // Keep previous steps active and add "active" class
-        $(".step-general-info").addClass("active");
-        $(".step-requirements").addClass("active");
-        $(".step-internal-info").addClass("active");
-        $(".step-web-login").addClass("active");
-    });
-
-    // When clicking "Attachments"
-    $("#AttachmentsTab").click(function (e) {
-        e.preventDefault();
-
-        // Hide WebLogin and show Attachments
-        $("#WebLogin").hide();
-        $("#Attachments").show();
-
-        // Keep previous steps active and add "active" class
-        $(".step-general-info").addClass("active");
-        $(".step-requirements").addClass("active");
-        $(".step-internal-info").addClass("active");
-        $(".step-web-login").addClass("active");
-        $(".step-attachments").addClass("active");
-    });
-});
-
+            // Click on step headers to navigate
+            $(".step-header").click(function () {
+                let index = $(".step-header").index(this);
+                if ($(this).hasClass("active")) {
+                    $(".tab-content > div").hide();
+                    $($(".tab-content > div").get(index)).show();
+                }
+            });
+        });
 </script>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -975,8 +971,8 @@ $(document).ready(function () {
  });
 
 
- </script>
- <script>
+</script>
+<script>
     document.getElementById('uploadFileArea').addEventListener('click', function() {
       document.getElementById('fileInput').click();
   });
@@ -1002,6 +998,7 @@ $(document).ready(function () {
     .step-indicator div {
         display: flex;
         align-items: center;
+        cursor: pointer;
     }
 
     .step-indicator .step-header .indicator-line {
