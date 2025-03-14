@@ -25,21 +25,28 @@
                 </div>
             </div>
             <div class="card-body">
-                <div class="step-indicator d-flex flex-wrap   mb-4">
-                    <div class="step-header active"><span class="circle">1</span> General Info. <p
-                            class="indicator-line mb-0 ms-2"></p>
+                <div class="step-indicator d-flex flex-wrap mb-4">
+                    <div class="step-header step-general-info active">
+                        <span class="circle">1</span> General Info.
+                        <p class="indicator-line mb-0 ms-2"></p>
                     </div>
-                    <div class="step-header"><span class="circle">2</span> Requirements<p
-                            class="indicator-line mb-0 ms-2"></p>
+                    <div class="step-header step-requirements">
+                        <span class="circle">2</span> Requirements
+                        <p class="indicator-line mb-0 ms-2"></p>
                     </div>
-                    <div class="step-header"><span class="circle">3</span> Internal Info<p
-                            class="indicator-line mb-0 ms-2"></p>
+                    <div class="step-header step-internal-info">
+                        <span class="circle">3</span> Internal Info
+                        <p class="indicator-line mb-0 ms-2"></p>
                     </div>
-                    <div class="step-header"><span class="circle">4</span> Web Login<p class="indicator-line mb-0 ms-2">
-                        </p>
+                    <div class="step-header step-web-login">
+                        <span class="circle">4</span> Web Login
+                        <p class="indicator-line mb-0 ms-2"></p>
                     </div>
-                    <div class="step-header"><span class="circle">5</span> Attachments</div>
+                    <div class="step-header step-attachments">
+                        <span class="circle">5</span> Attachments
+                    </div>
                 </div>
+
                 <form action="">
                     <div id="PersonalDetailTab">
 
@@ -866,6 +873,7 @@
 @endsection
 @push('js')
 <script>
+    
 $(document).ready(function () {
     // Initially show PersonalDetailTab, hide others
     $("#PersonalDetailTab").show();
@@ -886,9 +894,9 @@ $(document).ready(function () {
             $("#PersonalDetailTab").hide();
             $("#RequirementsTab").show();
 
-            // Keep previous steps active and add "active" class to Requirements
-            $(".step-header:contains('General Info.')").addClass("active");
-            $(".step-header:contains('Requirements')").addClass("active");
+            // Keep previous steps active and add "active" class
+            $(".step-general-info").addClass("active");
+            $(".step-requirements").addClass("active");
         }
     });
 
@@ -900,10 +908,10 @@ $(document).ready(function () {
         $("#RequirementsTab").hide();
         $("#InternalInformation").show();
 
-        // Keep previous steps active and add "active" class to Internal Info
-        $(".step-header:contains('General Info.')").addClass("active");
-        $(".step-header:contains('Requirements')").addClass("active");
-        $(".step-header:contains('Internal Info')").addClass("active");
+        // Keep previous steps active and add "active" class
+        $(".step-general-info").addClass("active");
+        $(".step-requirements").addClass("active");
+        $(".step-internal-info").addClass("active");
     });
 
     // When clicking "Web Login"
@@ -914,11 +922,11 @@ $(document).ready(function () {
         $("#InternalInformation").hide();
         $("#WebLogin").show();
 
-        // Keep previous steps active and add "active" class to Web Login
-        $(".step-header:contains('General Info.')").addClass("active");
-        $(".step-header:contains('Requirements')").addClass("active");
-        $(".step-header:contains('Internal Info')").addClass("active");
-        $(".step-header:contains('Web Login')").addClass("active");
+        // Keep previous steps active and add "active" class
+        $(".step-general-info").addClass("active");
+        $(".step-requirements").addClass("active");
+        $(".step-internal-info").addClass("active");
+        $(".step-web-login").addClass("active");
     });
 
     // When clicking "Attachments"
@@ -929,14 +937,15 @@ $(document).ready(function () {
         $("#WebLogin").hide();
         $("#Attachments").show();
 
-        // Keep previous steps active and add "active" class to Attachments
-        $(".step-header:contains('General Info.')").addClass("active");
-        $(".step-header:contains('Requirements')").addClass("active");
-        $(".step-header:contains('Internal Info')").addClass("active");
-        $(".step-header:contains('Web Login')").addClass("active");
-        $(".step-header:contains('Attachments')").addClass("active");
+        // Keep previous steps active and add "active" class
+        $(".step-general-info").addClass("active");
+        $(".step-requirements").addClass("active");
+        $(".step-internal-info").addClass("active");
+        $(".step-web-login").addClass("active");
+        $(".step-attachments").addClass("active");
     });
 });
+
 </script>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
