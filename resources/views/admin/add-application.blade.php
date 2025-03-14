@@ -276,7 +276,7 @@
                             </div>
                         </div>
                     </div>
-                    <div id="RequirementsTab">
+                    <div id="RequirementsTab" style="display: none;">>
 
                         <div class="row mb-4">
                             <div class="col-12 border-line py-5 mb-5">
@@ -572,7 +572,7 @@
                             </div>
                         </div>
                     </div>
-                    <div id="InternalInformation">
+                    <div id="InternalInformation" style="display: none;">>
 
                         <div class="row ">
                             <div class="col-12 border-line py-3 mb-5">
@@ -723,10 +723,140 @@
                         <div class="row">
                             <div class="col-12 text-end  mt-4">
                                 <button type="reset" class="btn btn-outline-secondary">Cancel</button>
-                                <a href="{{ route('weblogin') }}"  class="btn btn-primary">Web Login <i class="ri-arrow-right-circle-line"></i></a>
+                                <button id="WebLoginTab" class="btn btn-primary">Web Login <i class="ri-arrow-right-circle-line"></i></button>
                             </div>
                         </div>
                     </div>
+                </div>
+                <div id="WebLogin" style="display: none;">
+
+                    <div class="row mb-4">
+                        <div class="col-lg-10 border-line py-5 mb-5 mx-auto">
+                            <h5>Web Login</h5>
+                        </div>
+                        <div class="col-lg-10 mx-auto border-line py-5">
+                            <div class="card-body">
+                                <div class="form-check mb-4">
+                                    <input name="account-option" id="doNotCreateAccountRadio" class="form-check-input" type="radio" value="">
+                                    <label class="form-check-label" for="doNotCreateAccountRadio">
+                                        Do not create a user account
+                                    </label>
+                                </div>
+                                <div class="form-check mb-4">
+                                    <input name="account-option" id="createAccountRadio" class="form-check-input" type="radio" value="">
+                                    <label class="form-check-label" for="createAccountRadio">
+                                        Create a new user account
+                                    </label>
+                                </div>
+
+                                <div class="form-check mb-4">
+                                    <input name="account-option" id="existingUserRadio" class="form-check-input" type="radio" value="">
+                                    <label class="form-check-label" for="existingUserRadio">
+                                        User already registered, Please enter username
+                                    </label>
+                                </div>
+
+                                <!-- Section for Creating a New User -->
+                                <div class="collapse" id="createAccountSection" style="background-color: #f8f8f8;">
+                                    <div class="p-5 ">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <h5>Create new account</h5>
+                                            </div>
+
+                                            <div class="col-md-6">
+
+                                                <label for="newUserEmail" class="form-label">Userrname</label>
+                                                <div class="input-group input-group-merge mb-6 bg-white">
+
+                                                    <span class="input-group-text"> <i class="ri-user-line ri-20px"></i></span>
+                                                    <input type="text" class="form-control" placeholder="Enter email / username">
+                                                </div>
+
+                                            </div>
+                                            <div class="col-md-6">
+
+                                                <label for="newUserEmail" class="form-label">Password</label>
+                                                <div class="input-group input-group-merge mb-6 bg-white">
+                                                    <span class="input-group-text"><i class="ri-git-repository-private-line"></i></span>
+                                                    <input type="password" class="form-control" placeholder="***********">
+                                                </div>
+                                            </div>
+                                            <div class="col-12 text-end">
+                                                <button class="btn btn-primary">
+                                                    Create
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Section for Existing User Login -->
+                                <div class="collapse" id="existingUserSection" style="background-color: #f8f8f8;">
+                                    <div class="p-5 ">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <h5>Create new account</h5>
+                                            </div>
+
+                                            <div class="col-md-8">
+
+                                                <div>
+                                                    <label for="newUserEmail" class="form-label">Userrname</label>
+                                                    <div class="input-group input-group-merge mb-6 bg-white">
+
+                                                        <span class="input-group-text"> <i class="ri-user-line ri-20px"></i></span>
+                                                        <input type="text" class="form-control" placeholder="Enter email / username">
+                                                    </div>
+                                                </div>
+                                                <button class="btn btn-secondary">
+                                                    Check Username
+                                                </button>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-10 mx-auto text-end mt-3">
+                            <button type="reset" class="btn btn-outline-secondary">Cancel</button>
+                            <button id="AttachmentsTab"  class="btn btn-primary">Attachments <i
+                                class="ri-arrow-right-circle-line"></i></button>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div id="Attachments" style="display: none;">
+
+                    <div class="row mb-4">
+                        <div class="col-lg-10 border-line py-5 mb-5 mx-auto">
+                            <h5>Attachments</h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto border-line py-5">
+                            <div class="upload-file p-5 d-flex align-items-center justify-content-center" id="uploadFileArea">
+                                <div class="text-center">
+                                    <i class="ri-file-line text-info fs-1 mb-5"></i>
+
+                                    <p class="text-dark fw-bolder mt-4">Click or drag file to this area to upload</p>
+                                    <p  >Support for a single or bulk upload. Strickly prohibit from uploading company data or other band files</p>
+                                    <p id="fileName" class="text-success">No file selected</p>
+                                </div>
+                            </div>
+                            <input type="file" id="fileInput" style="display: none;">
+
+                        </div>
+                    </div>
+                    <div class="col-lg-8 mx-auto text-end mt-4">
+                        <button type="reset" class="btn btn-outline-secondary">Cancel</button>
+                        <button type="reset" class="btn btn-outline-secondary">Back</button>
+                        <button class="btn btn-primary"><i class="ri-check-double-line"></i>Finish </button>
+                    </div>
+                </div>
                 </form>
 
             </div>
@@ -739,7 +869,7 @@
 $(document).ready(function () {
     // Initially show PersonalDetailTab, hide others
     $("#PersonalDetailTab").show();
-    $("#RequirementsTab, #InternalInformation").hide();
+    $("#RequirementsTab, #InternalInformation, #WebLogin, #Attachments").hide();
 
     // When clicking "Next | Requirements"
     $("#nextStep").click(function (e) {
@@ -775,12 +905,87 @@ $(document).ready(function () {
         $(".step-header:contains('Requirements')").addClass("active");
         $(".step-header:contains('Internal Info')").addClass("active");
     });
+
+    // When clicking "Web Login"
+    $("#WebLoginTab").click(function (e) {
+        e.preventDefault();
+
+        // Hide InternalInformation and show WebLogin
+        $("#InternalInformation").hide();
+        $("#WebLogin").show();
+
+        // Keep previous steps active and add "active" class to Web Login
+        $(".step-header:contains('General Info.')").addClass("active");
+        $(".step-header:contains('Requirements')").addClass("active");
+        $(".step-header:contains('Internal Info')").addClass("active");
+        $(".step-header:contains('Web Login')").addClass("active");
+    });
+
+    // When clicking "Attachments"
+    $("#AttachmentsTab").click(function (e) {
+        e.preventDefault();
+
+        // Hide WebLogin and show Attachments
+        $("#WebLogin").hide();
+        $("#Attachments").show();
+
+        // Keep previous steps active and add "active" class to Attachments
+        $(".step-header:contains('General Info.')").addClass("active");
+        $(".step-header:contains('Requirements')").addClass("active");
+        $(".step-header:contains('Internal Info')").addClass("active");
+        $(".step-header:contains('Web Login')").addClass("active");
+        $(".step-header:contains('Attachments')").addClass("active");
+    });
 });
-
-
-
 </script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+     let createAccountRadio = document.getElementById('createAccountRadio');
+     let existingUserRadio = document.getElementById('existingUserRadio');
+     let doNotCreateAccountRadio = document.getElementById('doNotCreateAccountRadio');
 
+     let createAccountSection = document.getElementById('createAccountSection');
+     let existingUserSection = document.getElementById('existingUserSection');
+
+     function toggleSections() {
+         if (createAccountRadio.checked) {
+             createAccountSection.classList.add('show');
+             existingUserSection.classList.remove('show');
+         } else if (existingUserRadio.checked) {
+             existingUserSection.classList.add('show');
+             createAccountSection.classList.remove('show');
+         } else if (doNotCreateAccountRadio.checked) {
+             createAccountSection.classList.remove('show');
+             existingUserSection.classList.remove('show');
+         }
+     }
+
+     createAccountRadio.addEventListener('change', toggleSections);
+     existingUserRadio.addEventListener('change', toggleSections);
+     doNotCreateAccountRadio.addEventListener('change', toggleSections);
+ });
+
+
+ </script>
+ <script>
+    document.getElementById('uploadFileArea').addEventListener('click', function() {
+      document.getElementById('fileInput').click();
+  });
+
+  document.getElementById('fileInput').addEventListener('change', function() {
+      let files = this.files;
+      let fileNames = [];
+
+      if (files.length > 0) {
+          for (let i = 0; i < files.length; i++) {
+              fileNames.push(files[i].name);
+          }
+          document.getElementById('fileName').textContent = `Selected file(s): ${fileNames.join(', ')}`;
+      } else {
+          document.getElementById('fileName').textContent = "No file selected";
+      }
+  });
+</script>
 @endpush
 
 @push('css')

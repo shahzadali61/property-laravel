@@ -26,30 +26,33 @@
         </div>
     </div>
 </div>
-<div class="row mb-4">
-    <div class="col-lg-10 border-line py-5 mb-5 mx-auto">
-        <h5>Attachments</h5>
-    </div>
-</div>
-<div class="row">
-    <div class="col-lg-8 mx-auto border-line py-5">
-        <div class="upload-file p-5 d-flex align-items-center justify-content-center" id="uploadFileArea">
-            <div class="text-center">
-                <i class="ri-file-line text-info fs-1 mb-5"></i>
+<div id="Attachments">
 
-                <p class="text-dark fw-bolder mt-4">Click or drag file to this area to upload</p>
-                <p  >Support for a single or bulk upload. Strickly prohibit from uploading company data or other band files</p>
-                <p id="fileName" class="text-success">No file selected</p>
-            </div>
+    <div class="row mb-4">
+        <div class="col-lg-10 border-line py-5 mb-5 mx-auto">
+            <h5>Attachments</h5>
         </div>
-        <input type="file" id="fileInput" style="display: none;">
-
     </div>
-</div>
-<div class="col-lg-8 mx-auto text-end mt-4">
-    <button type="reset" class="btn btn-outline-secondary">Cancel</button>
-    <button type="reset" class="btn btn-outline-secondary">Back</button>
-    <button class="btn btn-primary"><i class="ri-check-double-line"></i>Finish </button>
+    <div class="row">
+        <div class="col-lg-8 mx-auto border-line py-5">
+            <div class="upload-file p-5 d-flex align-items-center justify-content-center" id="uploadFileArea">
+                <div class="text-center">
+                    <i class="ri-file-line text-info fs-1 mb-5"></i>
+
+                    <p class="text-dark fw-bolder mt-4">Click or drag file to this area to upload</p>
+                    <p  >Support for a single or bulk upload. Strickly prohibit from uploading company data or other band files</p>
+                    <p id="fileName" class="text-success">No file selected</p>
+                </div>
+            </div>
+            <input type="file" id="fileInput" style="display: none;">
+
+        </div>
+    </div>
+    <div class="col-lg-8 mx-auto text-end mt-4">
+        <button type="reset" class="btn btn-outline-secondary">Cancel</button>
+        <button type="reset" class="btn btn-outline-secondary">Back</button>
+        <button class="btn btn-primary"><i class="ri-check-double-line"></i>Finish </button>
+    </div>
 </div>
 
 
